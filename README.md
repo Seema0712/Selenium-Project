@@ -1,2 +1,2 @@
 # Selenium-Project
-Worked on Selenium with maven and testNg
+Worked on Selenium with maven and testNG
