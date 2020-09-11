@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <properties>
+        <!--if we want to include the folder as well -->
+        <property name="basePath">./logs</property>
+    </properties>
+    <Appenders>
+        <!-- the filename we can hardcode as well but if it has to create no. of classes then
+        it wud be difficult so basepath with .log extension and create a new file with .log-->
+        <RollingFile name="File" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+        <!-- hardcoding the file      fileName="${basePath}/prints.log"   -->
+        <!-- for providing the pattern rather than hardcoding so can eliminate fileName var-->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <SizeBasedTriggeringPolicy size="500"/>
+        </RollingFile>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- if we want to mention the particular path of the class and the name -->
+        <Logger name="testing.Log4jDemo" level="trace" additivity="false">
+            <!-- this ref is from above Appenders which will tell where to log whether file or console  -->
+            <AppenderRef ref="File"/>
+        </Logger>
+
+        <!-- this is from root level consists of all the folders and classes -->
+        <Root level="trace">
+            <!--level we can give as trace or error based on the requirement -->
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,3 @@
+20:58:22.964 [main] INFO  testing.Log4jDemo - the first step for logging
+20:58:22.966 [main] ERROR testing.Log4jDemo - incorrect object
+20:58:22.966 [main] FATAL testing.Log4jDemo - failure occurs

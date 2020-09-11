@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite"> <!-- parallel can be done methods , classes and tests as well
+
+    <listeners>
+        <listener class-name="testing.Listener"></listener>
+    </listeners>
+
+    <! these parameters here is at suite level but we can make it class level as well -->
+    <parameter name="url" value="www.google.com"></parameter>
+    <parameter name="port" value="0000"></parameter>
+
+
+
+    <!--<test name="Testing1">
+        <classes>
+            <class name="testing.DemoTest">
+                <methods>
+                    <include name="demo.*"/>
+                   &lt;!&ndash; .* is for regular expression &ndash;&gt;
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+
+    <!--<test name="Testing2">
+        <packages>
+            <package name="testing"></package>
+            &lt;!&ndash; for runniing the entire package we can use the above tags &ndash;&gt;
+        </packages>
+    </test>-->
+
+<!--    <test name="Testing1">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+      <packages>
+          <package name="testing"></package>
+      </packages>  
+    </test>-->
+
+
+    <!--<test name="Testing1">
+        <parameter name="url" value="www.facebook.com"></parameter> &lt;!&ndash; i am overriding the value here &ndash;&gt;
+        <classes>
+            <class name="testing.DemoTest2"></class>
+        </classes>
+    </test>
+-->
+    <!--test name="Testing">
+        <classes>
+            <class name="testing.DemoTest">
+                <parameter name="port" value="0000"></parameter>   &lt;!&ndash; class level also we can define parameters &ndash;&gt;
+            </class>
+            <class name="testing.DemoTest2">
+                <parameter name="port" value="0001"></parameter>
+            </class>
+        </classes>
+    </test>
+-->
+
+    <test name="testing1">
+        <classes>
+            <class name="testing.DemoTest"></class>
+        </classes>
+    </test>
+
+    <test name="testing2">
+        <classes>
+            <class name="testing.Demo2Test"></class>
+        </classes>
+    </test>
+
+</suite>
